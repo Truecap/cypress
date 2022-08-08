@@ -10,7 +10,11 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          spec: cypress/e2e/Cypress_Telnyx/Telnyx.cy.js cypress/e2e/Cypress_Telnyx/Telnyx.Regist.Login.cy.js
+          spec: cypress/e2e/Cypress_Telnyx/Telnyx.cy.js 
+       - name: Cypress run 2
+        uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/Cypress_Telnyx/Telnyx.Regist.Login.cy.js 
     
       - uses: cypress-io/github-action@v4
       
