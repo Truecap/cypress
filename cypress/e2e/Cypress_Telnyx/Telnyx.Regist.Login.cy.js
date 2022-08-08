@@ -20,7 +20,7 @@ describe("Telnyx only Registration and Login", () => {
     cy.get('[id="password"]').type("Test1234test!");
     cy.get('[class="sc-26f7330-5 lBxvj"]>div [fill="white"]').click();
     cy.get('[type="submit"]').click();
-    cy.get('[id="email_error"]', { timeout: 30000 }).should("be.visible");
+    cy.get('[class="sc-570b157-1 eUoKGn"]', { timeout: 30000 }).should("be.visible");
   });
 
   it("Log In", () => {
