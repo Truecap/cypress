@@ -101,7 +101,7 @@ describe("Telnyx", () => {
     });
   });
 
-  it.only("Verify elements visibility", () => {
+  it("Verify elements visibility", () => {
     cy.xpath('(//ul[@class="list-unstyled"])[3]//li').should("be.visible");
   });
 
@@ -120,7 +120,7 @@ describe("Telnyx", () => {
     cy.get('[class="tx-Z12BLcq"]').should("be.visible");
   });
 
-  xit("Finding Public Key", () => {
+  it("Finding Public Key", () => {
     cy.get('[class*=" justify-content-center"]').click();
     cy.get('[href="/#/app/account/general"]').click();
     cy.get('[e2e="PublicKey"]').click();
