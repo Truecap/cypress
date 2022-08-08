@@ -13,7 +13,7 @@ describe("Telnyx", () => {
         if (body.find('[class*="tx-27OtCC"]').length > 0) {
           cy.get('[class*="tx-27OtCC"]').should("be.visible");
         } else {
-          cy.get('form>div>div input[name="email"]').type(
+          cy.get('form>div>div input[name="email"]', { timeout: 30000 }).type(
             "testsne13@gmail.com"
           );
           cy.get('form>div>div input[name="password"]').type("Test1234test!");
