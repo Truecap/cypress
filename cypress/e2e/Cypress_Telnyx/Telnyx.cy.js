@@ -1,25 +1,3 @@
-it("Sign Up", () => {
-  cy.viewport(1920, 1080);
-  cy.visit("https://telnyx.com");
-  cy.get('li [class*="sc-5d3a275a-0"] a').click();
-  cy.get('[id="email"]').type("testsne13@gmail.com");
-  cy.get('[id="full_name"]').type("Test");
-  cy.get('[id="password"]').type("Test1234test!");
-  cy.get('[class="sc-26f7330-5 lBxvj"]>div [fill="white"]').click();
-  cy.get('[type="submit"]').click();
-  cy.get('[id="email_error"]', { timeout: 6000 }).should("be.visible");
-});
-
-it("Log In", () => {
-  cy.viewport(1920, 1080);
-  cy.visit("https://telnyx.com");
-  cy.get('[id="dialogAudio"] +a +a').click({ force: true });
-  cy.get('form>div>div input[name="email"]').type("testsne13@gmail.com");
-  cy.get('form>div>div input[name="password"]').type("Test1234test!");
-  cy.get('button[class*="LoginForm__LoginButton"]').click();
-  cy.get('[class*="tx-27OtCC"]', { timeout: 10000 }).should("be.visible");
-});
-
 describe("Telnyx", () => {
   beforeEach(function () {
     cy.viewport(1920, 1080);
@@ -40,7 +18,7 @@ describe("Telnyx", () => {
           );
           cy.get('form>div>div input[name="password"]').type("Test1234test!");
           cy.get('button[class*="LoginForm__LoginButton"]').click();
-          cy.get('[class*="tx-27OtCC"]', { timeout: 10000 }).should(
+          cy.get('[class*="tx-27OtCC"]', { timeout: 30000 }).should(
             "be.visible"
           );
         }
@@ -126,13 +104,12 @@ describe("Telnyx", () => {
     cy.get('[e2e="PublicKey"]').click();
     cy.get('[value*="+dbDlKHD"]').should(
       "have.value",
-      "+dbDlKHDZoJU0e+Gn3OdgAn9pr5v4K0SvYFRgTAtlvc="
-    );
+      "+dbDlKHDZoJU0e+Gn3OdgAn9pr5v4K0SvYFRgTAtlvc=");
   });
-});
 
-it("Sign Out profile", () => {
-  cy.get('[class*=" justify-content-center"]').click();
-  cy.get('[class="tx-1Iv0kw"]').click();
-  cy.get('[data-testid="login.signin.title"]').should("be.visible");
+  it("Sign Out profile", () => {
+    cy.get('[class*=" justify-content-center"]').click();
+    cy.get('[class="tx-1Iv0kw"]').click();
+    cy.get('[data-testid="login.signin.title"]').should("be.visible");
+  });
 });
