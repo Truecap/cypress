@@ -11,9 +11,9 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           spec: |
-          cypress/e2e/Cypress_Telnyx/Telnyx.cy.js 
-          cypress/e2e/Cypress_Telnyx/Telnyx.Regist.Login.cy.js
-          
+            cypress/e2e/Cypress_Telnyx/Telnyx.cy.js 
+            cypress/e2e/Cypress_Telnyx/Telnyx.Regist.Login.cy.js
+            
     
       - uses: cypress-io/github-action@v4
       
