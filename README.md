@@ -12,10 +12,10 @@ If you're using npm to install Cypress, we support:
 Node.js 12 or 14 and above
 
 ## Usage
-- Installing Cypress
+- Installing Cypress:
 npm install cypress --save-dev
 
-- Install Cypress xpath plugin 
+- Install Cypress xpath plugin: 
 npm install -D cypress-xpath
 
 - And add /cypress/suppotr/e2e.js  require('cypress-xpath')
